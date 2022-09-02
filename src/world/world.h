@@ -1,7 +1,7 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include "company.h"
+#include "organization.h"
 #include "person.h"
 #include "network.h"
 
@@ -9,7 +9,7 @@
 
 typedef struct {
   uint64_t seed;
-  Company **companies;
+  Organization **organizations;
   Person **people;
   Network **networks;
 } World;

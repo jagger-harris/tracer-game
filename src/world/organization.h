@@ -1,10 +1,16 @@
-#ifndef COMPANY_H
-#define COMPANY_H
+#ifndef ORGANIZATION_H
+#define ORGANIZATION_H
 
 #include "../util/names.h"
 #include "person.h"
 
+typedef enum {
+  technology,
+  bank
+} Type;
+
 typedef struct {
+  Type type;
   char prefix_name[MAX_NAME_LENGTH];
   char suffix_name[MAX_NAME_LENGTH];
   float worth;
@@ -14,8 +20,8 @@ typedef struct {
   Person *CTO;
   Person *CIO;
   Person **Employees;
-} Company;
+} Organization;
 
-Company company_generate(Random *random);
+Organization organization_generate(Type type, Random *random);
 
-#endif /* COMPANY_H */
+#endif /* ORGANIZATION_H */

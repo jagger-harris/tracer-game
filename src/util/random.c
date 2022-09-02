@@ -11,7 +11,7 @@ Random random_seed(uint64_t seed) {
   return random;
 }
 
-Random random_random(void) {
+Random random_random() {
   struct timeval tv;
   
   gettimeofday(&tv, NULL);

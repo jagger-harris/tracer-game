@@ -9,7 +9,7 @@ typedef struct {
 
 Random random_seed(uint64_t seed);
 
-Random random_random(void);
+Random random_random();
 
 void xorshift64star_next_state(Random *random);
 
